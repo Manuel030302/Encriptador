@@ -1,0 +1,167 @@
+*{
+    Margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+header{
+    background-color: beige;
+    padding: 10px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header nav div img{
+    height: 40px;
+}
+header nav ul{
+    display: flex;
+    gap: 15px;
+}
+header nav ul li a{
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header nav ul li a:hover{
+    color: antiquewhite;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+main{
+    background-color:rgb(58, 255, 216);
+    padding: 10px;
+    min-height: 80vh;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.Conten__form--UTF-8 form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Conten__form--UTF-8 .Cont__txtarea{
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+.Conten__form--UTF-8 .Cont__txtarea textarea{
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(51, 243, 204);
+}
+
+.Conten__form--UTF-8 .Cont__input{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.Conten__form--UTF-8 .Cont__input input{
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: larger;
+    background-color: rgb(134, 196, 250);
+    color: rgb(255, 255, 255);
+}
+
+
+.Conten__resut--UTF-8{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.Conten__resut--UTF-8 p{
+    background-color: rgb(220, 254, 246);
+    border-radius: 10px;
+    padding: 10px;
+    height: 30vh;
+    width: 100%;
+    word-wrap: break-word;
+}
+.Conten__resut--UTF-8 button{
+    width: 70%;
+    height: 30px;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    height: 4vh;
+    font-size: larger;
+    background-color: rgb(134, 196, 250);
+    color: rgb(255, 255, 255);
+}
+@media (min-width: 820px){
+    .Conten__form--UTF-8 .Cont__input{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Conten__form--UTF-8 .Cont__input input{
+        width: 40%;
+        height: 60px;
+        border-radius: 30px;
+    }
+    .Conten__resut--UTF-8 button{
+        width: 40%;
+        height: 60px;
+        border-radius: 30px;
+    }
+    .Conten__form--UTF-8 .Cont__txtarea textarea{
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        background-color: rgb(51, 243, 204);
+        font-size: large;
+    }
+    .Conten__resut--UTF-8 p{
+        background-color: rgb(220, 254, 246);
+        border-radius: 10px;
+        padding: 10px;
+        height: 30vh;
+        width: 100%;
+        word-wrap: break-word;
+        font-size: large;
+    }
+}
+@media (min-width: 1300px){
+    main{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(7, 1fr); 
+        gap: 0px 50px; 
+    }
+    main .Conten__form--UTF-8{
+        grid-column: 1/2;
+        grid-row: 2/7;
+    }
+    main .Conten__resut--UTF-8{
+        grid-column: 2/3;
+        grid-row: 2/7;
+    }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+footer{
+    background-color: rgb(134, 196, 250);
+}
+footer div a img{
+    height: 80px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

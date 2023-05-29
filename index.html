@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Encriptador UTF-8</title>
+    <meta name="description" content="">
 </head>
 <body>
     <header>
         <nav>
+            <div>
+                <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/dibk1ba07iflqhldupuz" alt="">
+            </div>
             <ul>
-                <li><a href="">UTF-8</a></li>
-                <li><a href="">Morse</a></li>
-                <li><a href="">efefefe</a></li>
+                <li><a href="#">UTF-8</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="Conten__form--UTF-8">
+        <h1>Encriptador UTF-8 (Limitado)</h1>
+        <div class="Conten__form--UTF-8">
             <form action="">
-                <fieldset>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                <fieldset class="Cont__txtarea">
+                    <textarea name="" id="txtarea__UTF8" cols="30" rows="10">Ingresa aqui tu texto sin caracteres especiales ni acentos.</textarea>
                 </fieldset>
-                <fieldset>
-                    <input type="submit" name="encriptar">
-                    <input type="submit" name="desencriptar">
+                <fieldset class="Cont__input">
+                    <input type="submit" name="encriptar" value="encriptar" id="input__cifrar" placeholder="Encriptar">
+                    <input type="submit" name="desencriptar" value="desencriptar" id="input__descifrar">
                 </fieldset>
             </form>
         </div>
-        <div id="Conten__p--UTF-8">
-            <p></p>
+        <div class="Conten__resut--UTF-8">
+            <p id="txtDisplay__UTF8" dir="ltr">Ninguna mensaje se ha encontrado</p>
+            <button id="btn__copy">Copiar</button>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div>
+            <h2>GitHub Profile</h2>
+            <a href="https://github.com/Manuel030302/Encriptador.git">
+                <img src="https://nextgen.group/hubfs/github_PNG65.png" alt="Icono Link de Github">
+            </a>
+        </div>
+    </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>
