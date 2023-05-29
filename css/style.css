@@ -94,6 +94,7 @@ h1{
     padding: 10px;
     height: 30vh;
     width: 100%;
+    max-width: 50vw;
     word-wrap: break-word;
 }
 .Conten__resut--UTF-8 button{

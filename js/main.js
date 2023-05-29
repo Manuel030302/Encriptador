@@ -1,7 +1,5 @@
 const txtAreaUTF = document.getElementById('txtarea__UTF8');
 const formulario = document.getElementById('Formulario')
-/* const encriptarUTF = document.getElementById('input__cifrar');
-const desencriptarUTF = document.getElementById('input__descifrar'); */
 const encriptarUTF = document.getElementById('input__cifrar');
 const desencriptarUTF = document.getElementById('input__descifrar');
 const txtDisplay = document.getElementById('txtDisplay__UTF8');
@@ -82,21 +80,18 @@ function hexADecimal(hexavariable){
 }
 
 function getTxt(enviar){
-    //encriptarUTF.onclick = (enviar) => {
-        enviar.preventDefault()
-        const textVar = txtAreaUTF.value
-        console.log(textVar)
-        const textArray = textVar.split("")
-        console.log(textArray)
+    enviar.preventDefault()
+    const textVar = txtAreaUTF.value
+    console.log(textVar)
+    const textArray = textVar.split("")
+    console.log(textArray)
 
-        return textArray
-    //}
+    return textArray
 }
 
 function encriptar(texto, claves){
     const cifrado = texto
     console.log(`cifrado ${cifrado}`)
-    //let charCifrade
     texto.forEach((element) => {
         console.log(element)
         let txtIndex = cifrado.findIndex((index) => index == element)
@@ -110,26 +105,20 @@ function encriptar(texto, claves){
         
         const charClave = claves.find(key => key.char == element)
         console.log(charClave)
-        //const claveIndex = claves.findIndex((index) => index == element)
 
         const charCifrade = decimalAHex(charClave.id)
         cifrado[txtIndex] = charCifrade
-        
-        //cifrado[txtIndex] = charCifrade
     })
     
     return cifrado
-    //console.log(cifrado)
 }
 
 function desencriptar(array, claves){
-    //const codeArray = array.filter((element) => element != ",")
     const codeArray = []
     const idArray = []
     let char = ''
     let mensaje = ''
     console.log(array)
-    //console.log(codeArray)
 
     array.forEach((element) => {
         
@@ -139,7 +128,6 @@ function desencriptar(array, claves){
         }else{
             codeArray.push(char)
             char = ''
-            //codeArray.push(element)
         }
         console.log(`array ${element}`)
         
@@ -164,30 +152,10 @@ function desencriptar(array, claves){
 function copyTxt(enviar) {  
     enviar.preventDefault()
     navigator.clipboard.writeText(txtDisplay.innerHTML)
-    // Select the text field
-    /* txtDisplay.select();
-    txtDisplay.setSelectionRange(0, 99999); // For mobile devices */
-  
-     // Copy the text inside the text field
-    /* navigator.clipboard.writeText(txtDisplay.value); */
-  
-    // Alert the copied text
     alert("Copied the text: " + txtDisplay.innerHTML);
 }
 hexADecimal('F1')
-/* decimalABinario(241)
-decimalAHex(241)
-//hexADecimal('F1')
 
-console.log(parseInt(1/2))
-
-const caca = "hola mundo"
-let variable = caca.split("")
-console.log(variable) */
-
-//encriptarUTF.onclick = getTxt()
-//encriptar(getTxt())
-//getTxt()
 let claves
 let arrCifrado
 fetch("js/claves.json")
@@ -208,12 +176,6 @@ fetch("js/claves.json")
         return claves
     })
     .then((resp) => {
-        //////////////// onclick
-        /* const txtArr = getTxt()
-        if(txtArr){
-            console.log(`HOLAAA ${txtArr}`)
-            encriptar(txtArr, claves)
-        } */
         let arrayCrypted
         encriptarUTF.onclick = (enviar) => {
             arrCifrado = getTxt(enviar)
@@ -221,7 +183,7 @@ fetch("js/claves.json")
             console.log(arrCifrado)
             arrayCrypted = encriptar(arrCifrado, claves)
             console.log(arrayCrypted)
-            const msgCrypted = arrayCrypted.toString() ///////////imprimir mensaje
+            const msgCrypted = arrayCrypted.toString() 
             txtDisplay.innerHTML = msgCrypted
             
             return arrayCrypted
@@ -235,13 +197,5 @@ fetch("js/claves.json")
         btCopy.onclick = (enviar) => {
             copyTxt(enviar)
         }
-        
-
-        //return txtArr
     })
-    /* .then((resp) => {
-        console.log(resp)
-        console.log(`RESP ${resp}`)
-        encriptar(resp, claves)
-    }) */
     .catch((err) => console.log(err))
